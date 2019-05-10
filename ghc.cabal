@@ -1,6 +1,6 @@
 Cabal-Version: 2.0
 Name: ghc
-Version: 8.6.4
+Version: 8.6.5
 
 License: BSD3
 License-File: LICENSE
@@ -55,7 +55,7 @@ source-repository head
 Library
     -- The generated code in autogen/ has been generated for a linux/x86_64 target
     -- So everything else is definitely not working...
-    if !(os(linux) && arch(x86_64) && impl(ghc == 8.6.4))
+    if !(os(linux) && arch(x86_64) && impl(ghc == 8.6.5))
       build-depends: base<0
 
     -- ...while this package may in theory allow to reinstall lib:ghc
@@ -83,10 +83,10 @@ Library
                    template-haskell == 2.14.*,
                    hpc        == 0.6.*,
                    transformers == 0.5.*,
-                   ghc-boot   == 8.6.4,
-                   ghc-boot-th == 8.6.4,
-                   ghc-heap   == 8.6.4,
-                   ghci == 8.6.4
+                   ghc-boot   == 8.6.5,
+                   ghc-boot-th == 8.6.5,
+                   ghc-heap   == 8.6.5,
+                   ghci == 8.6.5
 
     if os(windows)
         Build-Depends: Win32  >= 2.3 && < 2.7
